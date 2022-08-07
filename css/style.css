@@ -1,6 +1,7 @@
 nav {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(0deg, 0%, 9%);
+  border-bottom: 1px solid rgba(121, 120, 120, 0.055);
 }
 
 .nav--anchor {
@@ -27,6 +28,10 @@ nav {
   background: none;
 }
 
+.alert-decoration {
+  text-decoration: none;
+}
+
 .alert-notification {
   width: 15px;
   height: 25px;
@@ -40,6 +45,7 @@ nav {
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  margin: 0 0 0 15px;
 }
 
 .button-create-post {
@@ -56,6 +62,7 @@ nav {
     height: 40px;
     width: 118px;
     display: inline-block;
+    margin: 0 15px;
   }
   .button-create-post:hover {
     background-color: hsl(235deg, 72%, 55%);
