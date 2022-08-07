@@ -10,6 +10,9 @@
 .right-aside--strong{
     text-decoration: none;
     color: black;
+    &:hover{
+        cursor: pointer;
+    }
 }
 .aside__span--small{
     font-size: small;
@@ -18,7 +21,7 @@
 
 .right-aside--title{
     border-bottom: 1px solid rgba(121, 120, 120, 0.055);
-     &__:hover {
+     &:hover {
             cursor: pointer;
             color:hsl(235,72%,55%);
             }
@@ -43,7 +46,8 @@
         }
 }
 .right-aside--span{
-    background-color: #FCD34D ;
+    background-color: #FCD34D;
+    color: black;
     border-radius: 5px;
     padding: 1px;
     padding-left: 5px;

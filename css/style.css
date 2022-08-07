@@ -3,6 +3,11 @@ nav {
   color: hsl(0deg, 0%, 9%);
 }
 
+.nav--anchor {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 25%);
+}
+
 .navbar-toggler {
   border-style: none;
   color: transparent !important;
@@ -287,6 +292,9 @@ main .card .btn-secondary:hover {
   text-decoration: none;
   color: black;
 }
+.right-aside--strong:hover {
+  cursor: pointer;
+}
 
 .aside__span--small {
   font-size: small;
@@ -296,7 +304,7 @@ main .card .btn-secondary:hover {
 .right-aside--title {
   border-bottom: 1px solid rgba(121, 120, 120, 0.055);
 }
-.right-aside--title__:hover {
+.right-aside--title:hover {
   cursor: pointer;
   color: hsl(235deg, 72%, 55%);
 }
@@ -323,6 +331,7 @@ main .card .btn-secondary:hover {
 
 .right-aside--span {
   background-color: #FCD34D;
+  color: black;
   border-radius: 5px;
   padding: 1px;
   padding-left: 5px;
