@@ -1,0 +1,648 @@
+nav {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 9%);
+}
+
+.navbar-toggler {
+  border-style: none;
+  color: transparent !important;
+}
+
+.dev-logo {
+  height: 40px;
+  width: 50px;
+}
+
+.search-none {
+  display: none !important;
+}
+
+.search-mobile {
+  border: none;
+  background: none;
+}
+
+.alert-notification {
+  width: 15px;
+  height: 25px;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(4deg, 71%, 53%);
+  border-radius: 50px;
+  margin-left: -10px;
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.button-create-post {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+  .button-create-post {
+    color: hsl(235deg, 72%, 55%);
+    border-color: hsl(235deg, 72%, 55%);
+    height: 40px;
+    width: 118px;
+    display: inline-block;
+  }
+  .button-create-post:hover {
+    background-color: hsl(235deg, 72%, 55%);
+    border-color: hsl(235deg, 72%, 55%);
+    text-decoration: none;
+  }
+  .search-mobile {
+    display: none;
+  }
+  .search-none {
+    display: flex !important;
+  }
+  .input-search {
+    width: 350px;
+  }
+  .loupe-search {
+    margin-left: -33px;
+    margin-top: 5px;
+  }
+  .alert-notification {
+    right: 23%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .alert-notification {
+    right: 7.5%;
+  }
+}
+.aside-list {
+  list-style: none;
+}
+
+.aside-left a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 25%);
+}
+
+.none-display-aside {
+  display: none;
+}
+
+.fill-social-media:hover {
+  width: 40px;
+  height: 40px;
+  border-color: rgb(47, 58, 178);
+  border-radius: 25%;
+  fill: rgb(47, 58, 178);
+  background: rgba(59, 73, 223, 0.1019607843);
+}
+
+.fill-icons-left-aside {
+  padding: 5px;
+}
+
+.fill-icons-left-aside:hover {
+  border-color: rgb(47, 58, 178);
+  border-radius: 5px;
+  fill: rgb(47, 58, 178);
+  background: rgba(59, 73, 223, 0.1019607843);
+  text-decoration: underline;
+}
+.fill-icons-left-aside:hover a {
+  color: rgb(47, 58, 178);
+}
+
+.mytag-no-hover {
+  pointer-events: none;
+}
+
+.card-bg {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+@media screen and (min-width: 768px) {
+  .none-display-aside {
+    display: block;
+  }
+}
+body {
+  background-color: hsl(0deg, 0%, 96%);
+}
+
+main {
+  box-sizing: border-box;
+}
+main .nav .nav-item {
+  margin-top: 10px;
+}
+main .nav .nav-item .nav-link {
+  color: black;
+}
+main .nav .nav-item .nav-link:hover {
+  color: blue;
+}
+main .nav .nav-item:hover {
+  color: rgb(61, 61, 170);
+  background-color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+main .card {
+  margin-top: 6px;
+}
+main .card .card-img-top {
+  width: 100%;
+}
+main .card .container_img-text {
+  display: flex;
+}
+main .card .main__section--img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+main .card .text__name {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
+  border-style: none;
+  margin: 0%;
+}
+main .card .text__name:hover {
+  background-color: rgb(246, 244, 244);
+}
+main .card .card-text {
+  margin: 0;
+  font-weight: bold;
+  font-size: 28px;
+  text-decoration: none;
+  color: black;
+  border: 50px;
+}
+main .card .card-text:hover {
+  color: rgb(61, 61, 170);
+}
+main .card .text-muted {
+  font-size: small;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+  padding-right: 8px;
+  font-weight: lighter;
+}
+main .card .hashtag-hover--blue {
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+main .card .hashtag-hover--blue:hover {
+  background-color: rgba(0, 60, 255, 0.081);
+  border-radius: 5px;
+  border: solid 1px rgba(115, 115, 241, 0.566);
+}
+main .card .hashtag-hover--blue .hashtags--blue {
+  color: blue;
+}
+main .card .hashtag-hover--orange {
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+main .card .hashtag-hover--orange:hover {
+  background-color: rgba(255, 166, 0, 0.159);
+  border-radius: 5px;
+  border: solid 1px rgba(247, 189, 81, 0.651);
+}
+main .card .hashtag-hover--orange .hashtags--orange {
+  color: orange;
+}
+main .card .hashtag-hover--green {
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+main .card .hashtag-hover--green:hover {
+  background-color: rgba(38, 126, 38, 0.178);
+  border-radius: 5px;
+  border: solid 1px rgba(56, 146, 56, 0.57);
+}
+main .card .hashtag-hover--green .hashtags--green {
+  color: green;
+}
+main .card .hashtag-hover--yellow {
+  font-size: 14px;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+main .card .hashtag-hover--yellow:hover {
+  background-color: rgba(255, 255, 0, 0.13);
+  border-radius: 5px;
+  border: solid 1px rgba(242, 242, 93, 0.634);
+}
+main .card .hashtag-hover--yellow .hashtags--yellow {
+  color: yellow;
+}
+main .card .btn {
+  font-size: 13px;
+  border-style: none;
+  border-radius: 5px;
+}
+main .card .btn:hover {
+  background-color: rgb(246, 244, 244);
+}
+main .card .btn-secondary {
+  background-color: rgba(202, 196, 196, 0.711);
+  color: black;
+}
+main .card .btn-secondary:hover {
+  background-color: rgb(188, 184, 184);
+}
+
+.reactions {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .reactions {
+    display: contents;
+  }
+}
+.right-aside-mq {
+  display: none;
+}
+
+.see-all {
+  text-decoration: none;
+}
+
+.right-aside {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.right-aside--strong {
+  text-decoration: none;
+  color: black;
+}
+
+.aside__span--small {
+  font-size: small;
+  text-decoration: none;
+}
+
+.right-aside--title {
+  border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+}
+.right-aside--title__:hover {
+  cursor: pointer;
+  color: hsl(235deg, 72%, 55%);
+}
+
+.right-aside--listings {
+  border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+  color: hsl(0deg, 0%, 25%);
+}
+.right-aside--listings:hover {
+  cursor: pointer;
+  background-color: white;
+  color: hsl(235deg, 72%, 55%);
+}
+
+.right-aside--help {
+  border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+  color: hsl(0deg, 0%, 25%);
+}
+.right-aside--help:hover {
+  cursor: pointer;
+  background-color: white;
+  color: hsl(235deg, 72%, 55%);
+}
+
+.right-aside--span {
+  background-color: #FCD34D;
+  border-radius: 5px;
+  padding: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.right-aside--discuss {
+  border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+  color: hsl(0deg, 0%, 25%);
+}
+.right-aside--discuss:hover {
+  cursor: pointer;
+  background-color: white;
+  color: hsl(235deg, 72%, 55%);
+}
+
+@media screen and (min-width: 1024px) {
+  .right-aside-mq {
+    display: block;
+  }
+}
+.aside__left--fixed {
+  width: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+  position: fixed;
+  bottom: 20%;
+}
+
+.post--list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn__aside {
+  display: flex;
+  background: none;
+  border: 0;
+  color: inherit;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+}
+.icon__fill-red:hover {
+  fill: red;
+  background-color: rgba(255, 0, 0, 0.267);
+  border: 1px solid red;
+  border-radius: 50%;
+}
+.icon__fill-green:hover {
+  fill: green;
+  background-color: rgba(0, 128, 0, 0.267);
+  border: 1px solid green;
+  border-radius: 50%;
+}
+.icon__fill-purple:hover {
+  fill: purple;
+  background-color: rgba(128, 0, 128, 0.267);
+  border: 1px solid purple;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .post--list {
+    display: contents;
+  }
+  .aside__left--fixed {
+    background-color: transparent;
+    bottom: 60%;
+    left: 10%;
+  }
+  .btn__aside {
+    display: block;
+  }
+}
+.main__post--view {
+  color: hsl(0deg, 0%, 31%);
+  background-color: white;
+}
+
+.img__initial {
+  width: 100%;
+}
+
+.user__name--post {
+  text-decoration: none;
+  font-weight: bold;
+  color: hsl(0deg, 0%, 31%);
+}
+
+.user__business--post {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+
+.hashtag-hover--gray {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+.hashtag-hover--gray:hover {
+  background-color: rgba(49, 49, 49, 0.081);
+  border-radius: 5px;
+  border: solid 1px rgb(63, 63, 63);
+}
+.hashtag-hover--gray .hashtag--gray {
+  color: rgb(63, 63, 63);
+}
+
+.hashtag-hover--green {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+.hashtag-hover--green:hover {
+  background-color: rgba(0, 255, 0, 0.081);
+  border-radius: 5px;
+  border: solid 1px rgb(0, 255, 34);
+}
+.hashtag-hover--green .hashtag--green {
+  color: rgb(0, 255, 34);
+}
+
+.hashtag-hover--yellow {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+.hashtag-hover--yellow:hover {
+  background-color: rgba(238, 255, 0, 0.081);
+  border-radius: 5px;
+  border: solid 1px yellow;
+}
+.hashtag-hover--yellow .hashtag--yellow {
+  color: yellow;
+}
+
+.hashtag-hover--blue {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 31%);
+}
+.hashtag-hover--blue:hover {
+  background-color: rgba(0, 60, 255, 0.081);
+  border-radius: 5px;
+  border: solid 1px blue;
+}
+.hashtag-hover--blue .hashtag--blue {
+  color: blue;
+}
+
+.post-twitter {
+  cursor: pointer;
+}
+.post-twitter--img {
+  width: 50px;
+  height: 50px;
+}
+.post-twitter--codedex {
+  font-size: 1rem;
+}
+
+.gif--article {
+  width: 100%;
+  cursor: pointer;
+}
+
+.comments {
+  border-top: 1px solid rgb(194, 194, 194);
+}
+.comments__input--user {
+  width: 100%;
+  height: 150px;
+}
+.comments--img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.comments--icon {
+  width: 35px;
+  height: 35px;
+}
+.comments__card {
+  width: 100%;
+  height: auto;
+}
+.comments-gif {
+  width: 80%;
+}
+.comments--cursor {
+  cursor: pointer;
+}
+.comments__align--paragraph {
+  text-align: center;
+  color: rgb(194, 194, 194);
+}
+.comments__align--paragraph .comments__align--anchor {
+  color: rgb(194, 194, 194);
+  text-decoration: none;
+}
+.comments .btn {
+  border-style: none;
+  border-radius: 5px;
+}
+.comments .btn:hover {
+  background-color: rgb(246, 244, 244);
+}
+
+.aside-right-post {
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.card__right--post {
+  border-radius: 5px;
+  background-color: white;
+  height: 180px;
+}
+
+.bg-black {
+  background-color: black;
+  width: 100%;
+  height: 35px;
+  padding-top: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.bg-black .aside__right--icon {
+  width: 48px;
+  height: 48px;
+  vertical-align: bottom !important;
+}
+.bg-black .aside__right--text {
+  color: hsl(0deg, 0%, 64%);
+  font-size: small;
+}
+.bg-black .title__codedex--bold {
+  font-weight: bold;
+}
+.bg-black .title__codedex--bold:hover {
+  color: hsl(235deg, 72%, 55%);
+  cursor: pointer;
+}
+
+.trending--user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.trending--hover:hover {
+  border: 1px solid blue;
+  border-radius: 5px;
+  background-color: rgba(29, 29, 175, 0.021);
+  color: hsl(235deg, 72%, 55%);
+  cursor: pointer;
+}
+
+.trending--anchors {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 64%);
+}
+.trending--anchors:hover {
+  color: hsl(0deg, 0%, 64%);
+}
+
+@media screen and (min-width: 768px) {
+  .aside-right-post {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .aside-right-post {
+    width: 100%;
+  }
+}
+.read-next {
+  background-color: hsla(0deg, 0%, 76%, 0.329);
+}
+.read-next .read-next--user {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.read-next--hover {
+  cursor: pointer;
+}
+.read-next--hover:hover {
+  color: 0;
+}
+
+footer {
+  background-color: hsl(0deg, 0%, 90%);
+  padding: 30px;
+}
+footer .footer {
+  flex-direction: column;
+}
+footer .aling-paragraph {
+  text-align: center;
+}
+footer .plant-icon:hover {
+  width: 32px;
+  height: 32px;
+  border-color: rgb(47, 58, 178);
+  border-radius: 25%;
+  fill: rgb(47, 58, 178);
+  background: rgba(59, 73, 223, 0.1019607843);
+}
+footer a {
+  color: rgb(59, 73, 223);
+  text-decoration: none;
+}
+footer .anchors-styles:hover {
+  color: #2F3AB2;
+  text-decoration: underline;
+}
+footer .font {
+  font-size: smaller;
+  color: #5a5a5a;
+}/*# sourceMappingURL=style.css.map */

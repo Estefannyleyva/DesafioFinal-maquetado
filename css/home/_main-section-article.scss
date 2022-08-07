@@ -1,0 +1,123 @@
+.main__post--view{
+    color: hsl(0,0%,31%);
+    background-color: white;
+}
+.img__initial{
+    width: 100%;
+}
+.user__name--post{
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(0,0%,31%);
+}
+.user__business--post{
+    text-decoration: none;
+    color: hsl(0,0%,31%);
+}
+.hashtag-hover--gray {
+    text-decoration: none;
+    color: hsl(0,0%,31%);            
+    &:hover {
+        background-color: rgba(49, 49, 49, 0.081);
+        border-radius: 5px;
+        border: solid 1px rgb(63, 63, 63);
+    }
+    .hashtag--gray {
+        color: rgb(63, 63, 63);
+    }
+}
+.hashtag-hover--green {
+    text-decoration: none;
+    color: hsl(0,0%,31%);            
+    &:hover {
+        background-color: rgba(0, 255, 0, 0.081);
+        border-radius: 5px;
+        border: solid 1px rgb(0, 255, 34);
+    }
+    .hashtag--green {
+        color: rgb(0, 255, 34);
+    }
+}
+.hashtag-hover--yellow {
+    text-decoration: none;
+    color: hsl(0,0%,31%);            
+    &:hover {
+        background-color: rgba(238, 255, 0, 0.081);
+        border-radius: 5px;
+        border: solid 1px yellow;
+    }
+    .hashtag--yellow {
+        color: yellow;
+    }
+}
+.hashtag-hover--blue {
+    text-decoration: none;
+    color: hsl(0,0%,31%);            
+    &:hover {
+        background-color: rgba(0, 60, 255, 0.081);
+        border-radius: 5px;
+        border: solid 1px blue;
+    }
+    .hashtag--blue {
+        color: blue;
+    }
+}
+.post-twitter{
+    cursor: pointer;
+    &--img{
+        width: 50px;
+        height: 50px;
+    }
+    &--codedex{
+        font-size: 1rem;
+    }
+}
+.gif--article{
+    width: 100%;
+    cursor: pointer;
+}
+
+.comments{
+    border-top: 1px solid rgb(194, 194, 194);
+    
+    &__input--user{
+        width: 100%;
+        height: 150px;
+        
+    }
+    &--img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    &--icon{
+        width: 35px;
+        height: 35px;
+    }
+    &__card{
+        width: 100%;
+        height: auto;
+    }
+    &-gif{
+        width: 80%;
+    }
+    &--cursor{
+        cursor: pointer;
+    }
+    &__align--paragraph{
+        text-align: center;
+        color: rgb(194, 194, 194);
+        .comments__align--anchor{
+            color: rgb(194, 194, 194);
+            text-decoration: none;
+        }
+        
+    }
+    .btn {
+            border-style: none;
+            border-radius: 5px;
+            &:hover {
+                background-color: rgb(246, 244, 244);
+            }
+        }
+}

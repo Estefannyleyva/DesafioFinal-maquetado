@@ -1,0 +1,37 @@
+footer {
+    background-color: hsl(0,0%,90%);
+    padding: 30px;
+
+.footer {
+    flex-direction: column;
+}
+
+.aling-paragraph {
+    text-align: center;
+}
+
+
+.plant-icon:hover {
+    width: 32px;
+    height: 32px;
+    border-color: rgba(47, 58, 178, 1);
+    border-radius: 25%;
+    fill: rgba(47, 58, 178, 1);
+    background: #3b49df1A;
+}
+
+a {
+    color: rgba(59, 73, 223, 1);
+    text-decoration: none;
+}
+
+.anchors-styles:hover {
+    color: #2F3AB2;
+    text-decoration: underline;
+}
+
+.font {
+    font-size: smaller;
+    color: #5a5a5a;
+}
+}

@@ -1,0 +1,55 @@
+// background
+// color: hsl(0,0%,78%);
+
+.aside-list {
+    list-style: none;
+}
+
+.aside-left {
+    a { //OJO
+        text-decoration: none;
+        color: hsl(0,0%,25%)
+    }
+}
+
+.none-display-aside {
+    display: none;
+}
+
+.fill-social-media:hover {
+    width: 40px;
+    height: 40px;
+    border-color: rgba(47, 58, 178, 1);
+    border-radius: 25%;
+    fill: rgba(47, 58, 178, 1);
+    background: #3b49df1A;   
+}
+
+.fill-icons-left-aside {
+    padding: 5px;
+}
+
+.fill-icons-left-aside:hover {
+    a {
+        color: rgba(47, 58, 178, 1); 
+    }
+    border-color: rgba(47, 58, 178, 1);
+    border-radius: 5px;
+    fill: rgba(47, 58, 178, 1);
+    background: #3b49df1A;
+    text-decoration: underline;
+}
+
+.mytag-no-hover {
+    pointer-events: none;
+}
+
+.card-bg {
+    background-color: hsl(0,0%,98%);
+}
+
+@media screen and (min-width: 768px) {
+    .none-display-aside {
+        display: block;
+    }
+}

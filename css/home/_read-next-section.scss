@@ -1,0 +1,15 @@
+.read-next{
+    background-color: hsla(0, 0%, 76%, 0.329);
+    .read-next--user{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+.read-next--hover{
+    cursor: pointer;
+    &:hover{
+        color: blue($color: #000000);
+    }
+
+}

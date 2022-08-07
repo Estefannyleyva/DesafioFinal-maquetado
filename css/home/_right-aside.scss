@@ -1,0 +1,65 @@
+.right-aside-mq {
+    display: none;
+}
+.see-all{
+    text-decoration: none;
+}
+.right-aside{
+    background-color: hsl(0,0%,98%);
+}
+.right-aside--strong{
+    text-decoration: none;
+    color: black;
+}
+.aside__span--small{
+    font-size: small;
+    text-decoration: none;
+}
+
+.right-aside--title{
+    border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+     &__:hover {
+            cursor: pointer;
+            color:hsl(235,72%,55%);
+            }
+}
+
+.right-aside--listings{
+    border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+    color: hsl(0,0%,25%);
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+                color: hsl(235,72%,55%);;
+        }
+}
+.right-aside--help{
+    border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+    color: hsl(0,0%,25%);
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+                color:hsl(235,72%,55%);;
+        }
+}
+.right-aside--span{
+    background-color: #FCD34D ;
+    border-radius: 5px;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.right-aside--discuss{
+    border-bottom: 1px solid rgba(121, 120, 120, 0.055);
+    color: hsl(0,0%,25%);
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+                color:hsl(235,72%,55%);
+        }
+}
+@media screen and (min-width: 1024px) {
+    .right-aside-mq {
+        display: block;
+    }
+}
