@@ -18,5 +18,4 @@ buttonSavePost.addEventListener('click', (event) => {
     const post = new Post(userName, userImg, date, title, tags, likes, reading, headerImg, description, postImg);
     console.log(post)
     savePost(post);
-    
 });
