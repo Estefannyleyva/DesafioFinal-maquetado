@@ -20,11 +20,13 @@ export const savePost = (post) => {
     const objectToSave = {
       userName: post.userName,
       userImg: post.userImg, //hacer metodo para la fecha
+      date: post.date,
       title: post.title,
       tags: post.tags,// separa por # o por espacio
+      likes: post.likes,
       reading: post.reading,
       headerImg: post.headerImg,
-      // description: post.description,
+      description: post.description,
       postImg: post.postImg
       
     };
