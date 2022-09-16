@@ -16,7 +16,7 @@
     <title>DEV Community 👩‍💻👨‍💻</title>
   </head>
   <body>
-    <header class="sticky-top">
+    <header class="">
       <nav class="navbar">
         <div class="container-fluid">
           <div class="container">
@@ -60,7 +60,7 @@
 
                   <div>
                     <!--LOUPE 2-->
-                    <button class="search-mobile" type="submit">
+                    <button class="search-mobile" type="button">
                       <img
                         src="./assets/home/nav-section.scss/loupe-search.svg"
                         alt="Search"
@@ -70,10 +70,60 @@
 
                       <button
                         class="button-create-post btn btn-outline-success"
-                        type="submit"
+                        type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                       >
                         Create Post
                       </button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="mb-3">
+                                  <label for="user-name" class="col-form-label">User Name</label>
+                                  <input class="form-control" id="user-name" type="text">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="user-url" class="col-form-label">User Profile URL</label>
+                                  <input class="form-control" id="user-url" type="url">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="title" class="col-form-label">Title</label>
+                                  <input class="form-control" id="title" type="text">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="tags" class="col-form-label">Tags</label>
+                                  <input class="form-control" id="tags" type="text">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="reading" class="col-form-label">Reading Time</label>
+                                  <input class="form-control" id="reading" type="number">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="header-img" class="col-form-label">Header Img URL</label>
+                                  <input class="form-control" id="header-img" type="url">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="description" class="col-form-label">Post Description</label>
+                                  <input class="form-control" id="description" type="text">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="post-img" class="col-form-label">Post Img URL</label>
+                                  <input class="form-control" id="post-img" type="url">
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary" id="savePost">Publish Post</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     <!--NOTIFICATION ICON-->
                     <a class="alert-decoration" href="#"
                       ><img class="alert--relative"
@@ -586,7 +636,7 @@
               <li class="nav-item"><a class="nav-link" href="#">Latest</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Top</a></li>
             </ul>
-            <article>
+          
               <!--CARD-->
               <div class="card"><a href="#" class="main-card"></a>
                 <img src="./assets/home/assets-mainsection/main-img.webp" class="card-img-top" alt="..." />
@@ -614,8 +664,7 @@
                     </section>
                 </div>
               </div>
-              <!--CARD-->
-            </article>         
+                      
             <!--CARD-->
             <div class="card"><a href="#" class="main-card"></a>
               <div class="card-body">      
