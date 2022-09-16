@@ -1,6 +1,5 @@
 import { getFirestore, addDoc, deleteDoc, updateDoc, getDoc, collection, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
-
 const firebaseConfig = {
     apiKey: "AIzaSyACuaskt6H9j6bjsLKurzIMihNWzHtf8cM",
     authDomain: "devtoproject-cd612.firebaseapp.com",
@@ -20,14 +19,12 @@ const db = getFirestore();
 export const savePost = (post) => {
     const objectToSave = {
       userName: post.userName,
-      userImg: post.userImg,
-      // date: date, //hacer metodo para la fecha
+      userImg: post.userImg, //hacer metodo para la fecha
       title: post.title,
       tags: post.tags,// separa por # o por espacio
-      // likes: likes, // metodo para sumar los likes
       reading: post.reading,
       headerImg: post.headerImg,
-      description: post.description,
+      // description: post.description,
       postImg: post.postImg
       
     };
