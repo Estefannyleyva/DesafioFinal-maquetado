@@ -16,3 +16,21 @@ const app = initializeApp(firebaseConfig);
 
 // Connection with Firestore
 const db = getFirestore();
+
+export const savePost = (post) => {
+    const objectToSave = {
+      userName: post.userName,
+      userImg: post.userImg,
+      // date: date, //hacer metodo para la fecha
+      title: post.title,
+      tags: post.tags,// separa por # o por espacio
+      // likes: likes, // metodo para sumar los likes
+      reading: post.reading,
+      headerImg: post.headerImg,
+      description: post.description,
+      postImg: post.postImg
+      
+    };
+    const canasta = collection(db, 'posts');
+    addDoc(canasta, objectToSave);
+};
