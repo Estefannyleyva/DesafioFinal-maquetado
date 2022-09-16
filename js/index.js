@@ -6,15 +6,17 @@ buttonSavePost.addEventListener('click', (event) => {
     event.preventDefault();
     const userName = document.querySelector('#user-name').value;
     const userImg = document.querySelector('#user-url').value;
+    const date = 0;
     const title = document.querySelector('#title').value;
     const tags = document.querySelector('#tags').value;
+    let likes = 2;
     const reading = document.querySelector('#reading').value;
     const headerImg = document.querySelector('#header-img').value;
     const description = document.querySelector('#description').value;
     const postImg = document.querySelector('#post-img').value;
-    console.log(userName,userImg,title,tags,reading,headerImg,description,postImg)
-    const post = new Post(userName, userImg, title, tags, reading, headerImg, description, postImg);
+    
+    const post = new Post(userName, userImg, date, title, tags, likes, reading, headerImg, description, postImg);
+    console.log(post)
     savePost(post);
-    modal.style.display = 'none';
     
 });

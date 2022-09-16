@@ -32,3 +32,4 @@ export class Post {
         this.likes++;
     }
 };
+// si alguien le da click en like aumenta el valor
