@@ -6,7 +6,9 @@ buttonSavePost.addEventListener('click', (event) => {
     event.preventDefault();
     const userName = document.querySelector('#user-name').value;
     const userImg = document.querySelector('#user-url').value;
-    const date = 0;
+    const date = new Date();
+    const dateF = date.toDateString();
+    console.log(dateF)
     const title = document.querySelector('#title').value;
     const tags = document.querySelector('#tags').value;
     let likes = 2;
@@ -15,7 +17,7 @@ buttonSavePost.addEventListener('click', (event) => {
     const description = document.querySelector('#description').value;
     const postImg = document.querySelector('#post-img').value;
     
-    const post = new Post(userName, userImg, date, title, tags, likes, reading, headerImg, description, postImg);
+    const post = new Post(userName, userImg, dateF, title, tags, likes, reading, headerImg, description, postImg);
     console.log(post)
     savePost(post);
 });
