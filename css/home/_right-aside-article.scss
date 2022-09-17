@@ -4,6 +4,7 @@
     border-bottom-right-radius: 5px;
 }
 .card__right--post{
+    width: 100%;
     border-radius: 5px;
     background-color: white;
     height: 180px;
@@ -60,7 +61,7 @@
 
 @media screen and (min-width:768px) {
     .aside-right-post{
-        width: 90%;
+        width: 110%;
     }
 }
 @media screen and (min-width:1024px) {

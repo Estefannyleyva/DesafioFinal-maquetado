@@ -10,10 +10,7 @@
     font-weight: bold;
     color: hsl(0,0%,31%);
 }
-.user__business--post{
-    text-decoration: none;
-    color: hsl(0,0%,31%);
-}
+
 .hashtag-hover--gray {
     text-decoration: none;
     color: hsl(0,0%,31%);            
@@ -61,20 +58,6 @@
     .hashtag--blue {
         color: blue;
     }
-}
-.post-twitter{
-    cursor: pointer;
-    &--img{
-        width: 50px;
-        height: 50px;
-    }
-    &--codedex{
-        font-size: 1rem;
-    }
-}
-.gif--article{
-    width: 100%;
-    cursor: pointer;
 }
 
 .comments{

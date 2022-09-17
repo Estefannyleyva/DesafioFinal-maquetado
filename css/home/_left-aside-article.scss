@@ -1,8 +1,11 @@
+.aside__left--post{
+    width: 100%;
+}
 .aside__left--fixed{
     width: 100%;
     background-color: hsl(0, 0%, 100%);
     position: fixed;
-    bottom: 20%;
+    top: 93%;
 }
 .post--list{
     list-style: none;
@@ -43,13 +46,17 @@
 
   }
   @media screen and(min-width:768px) {
+    .aside__left--post{
+        width: 50px;
+        
+    }
     .post--list{
         display: contents;
     }
     .aside__left--fixed{
+        width: 50px;
         background-color: transparent;
-        bottom: 60%;
-        left: 10%;
+        top: 30%;
     }
      .btn__aside{
         display: block;

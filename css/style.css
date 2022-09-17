@@ -360,11 +360,15 @@ main .card .btn-secondary:hover {
     display: block;
   }
 }
+.aside__left--post {
+  width: 100%;
+}
+
 .aside__left--fixed {
   width: 100%;
   background-color: hsl(0deg, 0%, 100%);
   position: fixed;
-  bottom: 20%;
+  top: 93%;
 }
 
 .post--list {
@@ -405,13 +409,16 @@ main .card .btn-secondary:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .aside__left--post {
+    width: 50px;
+  }
   .post--list {
     display: contents;
   }
   .aside__left--fixed {
+    width: 50px;
     background-color: transparent;
-    bottom: 60%;
-    left: 10%;
+    top: 30%;
   }
   .btn__aside {
     display: block;
@@ -429,11 +436,6 @@ main .card .btn-secondary:hover {
 .user__name--post {
   text-decoration: none;
   font-weight: bold;
-  color: hsl(0deg, 0%, 31%);
-}
-
-.user__business--post {
-  text-decoration: none;
   color: hsl(0deg, 0%, 31%);
 }
 
@@ -489,22 +491,6 @@ main .card .btn-secondary:hover {
   color: blue;
 }
 
-.post-twitter {
-  cursor: pointer;
-}
-.post-twitter--img {
-  width: 50px;
-  height: 50px;
-}
-.post-twitter--codedex {
-  font-size: 1rem;
-}
-
-.gif--article {
-  width: 100%;
-  cursor: pointer;
-}
-
 .comments {
   border-top: 1px solid rgb(194, 194, 194);
 }
@@ -554,6 +540,7 @@ main .card .btn-secondary:hover {
 }
 
 .card__right--post {
+  width: 100%;
   border-radius: 5px;
   background-color: white;
   height: 180px;
@@ -608,7 +595,7 @@ main .card .btn-secondary:hover {
 
 @media screen and (min-width: 768px) {
   .aside-right-post {
-    width: 90%;
+    width: 110%;
   }
 }
 @media screen and (min-width: 1024px) {

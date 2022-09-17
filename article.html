@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon"
+      href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>DEV.to</title>
-</head>
+    <title>DEV Community 👩‍💻👨‍💻</title>
+  </head>
 <body>
-  <header>
-    <nav class="navbar bg-light">
+  <header class="">
+    <nav class="navbar">
       <div class="container-fluid">
         <div class="container">
           <div class="row">
@@ -57,7 +60,7 @@
 
                 <div>
                   <!--LOUPE 2-->
-                  <button class="search-mobile" type="submit">
+                  <button class="search-mobile" type="button">
                     <img
                       src="./assets/home/nav-section.scss/loupe-search.svg"
                       alt="Search"
@@ -67,12 +70,60 @@
 
                     <button
                       class="button-create-post btn btn-outline-success"
-                      type="submit"
-                    >
-                      Create Post
-                    </button>
+                      type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    >Create Post</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label for="user-name" class="col-form-label">User Name</label>
+                                <input class="form-control" id="user-name" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="user-url" class="col-form-label">User Profile URL</label>
+                                <input class="form-control" id="user-url" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="title" class="col-form-label">Title</label>
+                                <input class="form-control" id="title" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="tags" class="col-form-label">Tags</label>
+                                <input class="form-control" id="tags" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="reading" class="col-form-label">Reading Time</label>
+                                <input class="form-control" id="reading" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="header-img" class="col-form-label">Header Img URL</label>
+                                <input class="form-control" id="header-img" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="description" class="col-form-label">Post Description</label>
+                                <input class="form-control" id="description" type="text">
+                              </div>
+                              <div class="mb-3">
+                                <label for="post-img" class="col-form-label">Post Img URL</label>
+                                <input class="form-control" id="post-img" type="text">
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="savePost">Publish Post</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <!--NOTIFICATION ICON-->
-                  <a class="" href="#"
+                  <a class="alert-decoration" href="#"
                     ><img class="alert--relative"
                       src="./assets/home/nav-section.scss/alarm.svg"
                       alt="Notification Alerts"
@@ -82,7 +133,7 @@
                   <a href="#"
                     ><img
                       class="profile-image"
-                      src="./assets/home/nav-section.scss/profile-image.webp"
+                      src="./assets/home/nav-section.scss/profile-pic-devto.png"
                       alt="Search"
                   /></a>
                 </div>
@@ -107,139 +158,187 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="####">
+                <ul class="aside-list mt-3">
+                  <li class="nav-item fill-icons-left-aside">
                     <img
+                      class="#"
                       src="./assets/home/left-aside.scss/home.svg"
                       alt="Home Icon"
-                    /><a class="ms-2" href="./">Home</a>
+                    /><a class="nav--anchor ms-2" href="./">Home</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/reading-list.svg"
                       alt="Reading List Icon"
-                    /><a class="ms-2" href="#">Reading List</a>
+                    /><a class="nav--anchor ms-2" href="#">Reading List</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/listings.svg"
                       alt="Listings Icon"
-                    /><a class="ms-2" href="#">Listings</a>
+                    /><a class="nav--anchor ms-2" href="#">Listings</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/podcasts.svg"
                       alt="Podcasts Icon"
-                    /><a class="ms-2" href="#">Podcasts</a>
+                    /><a class="nav--anchor ms-2" href="#">Podcasts</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/videos.svg"
                       alt="Videos Icon"
-                    /><a class="ms-2" href="#">Videos</a>
+                    /><a class="nav--anchor ms-2" href="#">Videos</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/tags.svg"
                       alt="Tags Icon"
-                    /><a class="ms-2" href="#">Tags</a>
+                    /><a class="nav--anchor ms-2" href="#">Tags</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/faq.svg"
                       alt="Frequently Ansers & Questions Icon"
-                    /><a class="ms-2" href="#">FAQ</a>
+                    /><a class="nav--anchor ms-2" href="#">FAQ</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/forem-shop.svg"
                       alt="Forem Shop Icon"
-                    /><a class="ms-2" href="#">Forem Shop</a>
+                    /><a class="nav--anchor ms-2" href="#">Forem Shop</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/sponsors.svg"
                       alt="Sponsors Icon"
-                    /><a class="ms-2" href="#">Sponsors</a>
+                    /><a class="nav--anchor ms-2" href="#">Sponsors</a>
                   </li>
-                  <li class="mt-3∫">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/about.svg"
                       alt="About Icon"
-                    /><a class="ms-2" href="#">About</a>
+                    /><a class="nav--anchor ms-2" href="#">About</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/contact.svg"
                       alt="Contact Icon"
-                    /><a class="ms-2" href="#">Contact</a>
+                    /><a class="nav--anchor ms-2" href="#">Contact</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/guides.svg"
                       alt="Guides Icon"
-                    /><a class="ms-2" href="#">Guides</a>
+                    /><a class="nav--anchor ms-2" href="#">Guides</a>
                   </li>
-                  <li class="mt-3 mb-4">
+                  <li class="nav-item mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/software-comparisons.svg"
                       alt="Software comparisons Icon"
-                    /><a class="ms-2" href="#">Software comparisons</a>
+                    /><a class="nav--anchor ms-2" href="#">Software comparisons</a>
                   </li>
                 </ul>
-                <ul
-                  class="aside-list navbar-nav justify-content-end flex-grow-1"
-                >
-                  <!--TEST PÁRRAFO-->
+                <ul class="aside-list mt-5">
                   <p><strong>Other</strong></p>
-                  <li class="#">
+                  <li class="mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/code-of-conduct.svg"
                       alt="Code of Conduct Icon"
-                    /><a class="ms-2" href="#">Code of Conduct</a>
+                    /><a class="nav--anchor ms-2" href="#">Code of Conduct</a>
                   </li>
-                  <li class="mt-3">
+                  <li class="mt-3 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/privacy-policy.svg"
                       alt="Privacy Policy Icon"
-                    /><a class="ms-2" href="#">Privacy Policy</a>
+                    /><a class="nav--anchor ms-2" href="#">Privacy Policy</a>
                   </li>
-                  <li class="mt-3 mb-4">
+                  <li class="mt-3 mb-4 fill-icons-left-aside">
                     <img
                       src="./assets/home/left-aside.scss/terms-of-use.svg"
                       alt="Terms of User Icon"
-                    /><a class="ms-2" href="#">Terms of use</a>
+                    /><a class="nav--anchor ms-2" href="#">Terms of use</a>
                   </li>
                 </ul>
-              </div>
-              <div class="mt-2 mb-4 ms-2 d-flex justify-content-around">
-                <img
-                  src="./assets/home/left-aside.scss/twitter.svg"
-                  alt="Twitter Icon"
-                />
-                <a href="https://twitter.com/thepracticaldev"></a>
-                <img
-                  src="./assets/home/left-aside.scss/facebook.svg"
-                  alt="Facebook Icon"
-                />
-                <a href="https://www.facebook.com/thepracticaldev"></a>
-                <img
-                  src="./assets/home/left-aside.scss/gihtub.svg"
-                  alt="GitHub Icon"
-                />
-                <a href="https://github.com/forem"></a>
-                <img
-                  src="./assets/home/left-aside.scss/instagram.svg"
-                  alt="Instagram Icon"
-                />
-                <a href="https://www.instagram.com/thepracticaldev/"></a>
-                <img
-                  src="./assets/home/left-aside.scss/twitch.svg"
-                  alt="Twitch Icon"
-                />
-                <a href="https://www.twitch.tv/thepracticaldev"></a>
-              </div>
+                <div class="mt-4 d-flex justify-content-between ms-4">
+                  <svg
+                    class="fill-social-media crayons-icon c-link__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    role="img"
+                    aria-labelledby="ahl0dt0t146y73mkr446hcvp5p9wrox9"
+                  >
+                    <title id="ahl0dt0t146y73mkr446hcvp5p9wrox9">Twitter</title>
+                    <path
+                      d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z"
+                    ></path>
+                  </svg>
+                  <a href="https://twitter.com/thepracticaldev"></a>
+                  <svg
+                    class="fill-social-media crayons-icon c-link__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    role="img"
+                    aria-labelledby="a8uloyfthzn941i6ildec2clqqoy62v6"
+                  >
+                    <title id="a8uloyfthzn941i6ildec2clqqoy62v6">Facebook</title>
+                    <path
+                      d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z"
+                    ></path>
+                  </svg>
+                  <a href="https://www.facebook.com/thepracticaldev"></a>
+                  <svg
+                    class="fill-social-media crayons-icon c-link__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    role="img"
+                    aria-labelledby="afpkbvqip97o0asjyex4m4564h7sr1d7"
+                  >
+                    <title id="afpkbvqip97o0asjyex4m4564h7sr1d7">Github</title>
+                    <path
+                      d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z"
+                    ></path>
+                  </svg>
+                  <a href="https://github.com/forem"></a>
+                  <svg
+                    class="fill-social-media crayons-icon c-link__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    role="img"
+                    aria-labelledby="ah57f1oprn2u6j75if0zm42r02csae5q"
+                  >
+                    <title id="ah57f1oprn2u6j75if0zm42r02csae5q">Instagram</title>
+                    <path
+                      d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"
+                    ></path>
+                  </svg>
+                  <a href="https://www.instagram.com/thepracticaldev/"></a>
+                  <svg
+                    class="fill-social-media crayons-icon c-link__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    role="img"
+                    aria-labelledby="a6x93dldyi7fa3nmkox29dxv1867ymcv"
+                  >
+                    <title id="a6x93dldyi7fa3nmkox29dxv1867ymcv">Twitch</title>
+                    <path
+                      d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z"
+                    ></path>
+                  </svg>
+                  <a href="https://www.twitch.tv/thepracticaldev"></a>
+                </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -248,41 +347,41 @@
       <section class="container">
         <div class="row">
           <!--LEFT-ASIDE VICTOR - Test -->
-          <aside class="aside__left--post col-12 col-md-2 col-lg-2 d-lg-flex justify-content-end p-0">
+          <aside class="aside__left--post col-12 col-md-1 p-0">
             <section class="aside__left--fixed">
-              <ul class="post post--list m-auto">
-                <li class="pt-mb-4">
-                  <button class="btn__aside">
+              <ul class="post post--list mb-md-5">
+                <li class="aside-icon mb-md-4">
+                  <button class="btn__aside p-0">
                     <svg class="icon icon__fill-red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
                       <path d="M21.179 12.794l.013.014L12 22l-9.192-9.192.013-.014A6.5 6.5 0 0112 3.64a6.5 6.5 0 019.179 9.154zM4.575 5.383a4.5 4.5 0 000 6.364L12 19.172l7.425-7.425a4.5 4.5 0 10-6.364-6.364L8.818 9.626 7.404 8.21l3.162-3.162a4.5 4.5 0 00-5.99.334l-.001.001z"></path>
                     </svg>
-                    <p>33</p>
+                    <p class="mb-0">33</p>
                   </button>
                 </li>
-                <li class="icon--hover-post pt-mb-4">
-                  <button class="btn__aside">
+                <li class="aside-icon mb-md-4">
+                  <button class="btn__aside p-0">
                     <svg class="icon icon__fill-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
                       <path d="M5.645 8.013c.013-.265-.261-.323-.4-.183-1.16 1.17-1.822 3.865-.344 7.32.294.961 1.938 3.19.84 6.131l-.003.006c-.094.255.206.404.366.263 1.395-1.226 1.933-3.593 1.1-6.375-.488-1.657-1.955-4.226-1.559-7.162zm-3.22 2.738c.05-.137-.124-.417-.326-.225-.939.893-1.316 2.863-.976 4.605.547 2.878 2.374 3.526 2.066 6.629-.028.102.176.38.348.154 1.546-2.033.409-4.453-.241-6.006-1.005-2.386-1.087-4.118-.871-5.157zM22.2 3.543l-8.579 3.68c-.332-.343-.615-.63-.76-.773-.527-.517.313-4.224-.409-4.439-.933-.277-5.042 4.624-4.696 7.953.224 2.735 2.193 4.89 1.72 8.412 3.446-.644 4.841 1.697 5.83 2.45 1.752 1.335 5.155-.551 3.807-3.582-.193-.435-2.05-4.732-2.931-6.775l6.619-5.94c.486-.44-.003-1.242-.601-.986zm-9.418 9.535a.828.828 0 01-.74-.9.825.825 0 01.81-.76c.479 0 .85.42.81.903a.824.824 0 01-.88.757z"></path>
                     </svg>
-                    <p>15</p>
+                    <p class="mb-0">15</p>
                   </button>
                 </li>
-                <li class="pt-mb-4">
-                  <button class="btn__aside">
+                <li class="aside-icon mb-md-4">
+                  <button class="btn__aside p-0">
                     <svg class="icon icon__fill-purple" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
                       <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
                     </svg>
-                    <p>6</p>
+                    <p class="mb-0">6</p>
                   </button>
                 </li>
-                <li>
-                  
+                <li class="aside-icon mb-md-4">
+                  <button class="btn__aside p-0 icon"><b>. . .</b></button>
                 </li>
               </ul>
             </section>
           </aside>
-          <!--MAIN ANNIE-->
-          <main class="main__post--view col-12 col-md-10 col-lg-7 p-0 p-md-0">
+          <!--MAIN Fanny-->
+          <main class="main__post--view col-12 col-md-11 col-lg-8 p-0 p-md-0">
             <article class=" p-2">
                 <img class="img img__initial"
                     src="https://res.cloudinary.com/practicaldev/image/fetch/s--rG4Zh-Wt--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hjdsgh66s6o1ry1zcci3.png"
@@ -293,8 +392,6 @@
                     <div>
                       <p>
                         <a class="user__name--post" href="">Sonny Li</a>
-                        for
-                        <a class="user__business--post" href="">Codédex</a>
                         <br>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
@@ -306,75 +403,21 @@
                   <a class="hashtag-hover--yellow ms-2" href=""> <span class="hashtag--yellow">#</span>tutorial</a>
                   <a class="hashtag-hover--blue ms-2" href=""><span class="hashtag--blue">#</span>python</a>
                   <p>
-                    👋 Hello Devs!
                     <br>
+                    👋 Hello Devs!
+                  
                     I’m Sonny, Founder and Chief Vibes Officer of Codédex, a brand new learn to code platform for high schoolers
                     and collegestudents.
-                    <br>
                     We are beyond excited to announce that we just launched! 🥳🚀🎉
-                    <a href=""></a>
                   </p>
-                  <a href="https://www.codedex.io ">https://www.codedex.io ✨</a>
+                  
                 </section>
                 
-                <section class="post-twitter ps-md-5 p-2">
-                  <div class="card mb-3 position-static">
-                    <video loop="" controls="">
-                        <source
-                            src="https://video.twimg.com/ext_tw_video/1552677499619971079/pu/vid/480x270/KHywpKYc89QqsZhr.mp4?tag=12"
-                            type="video/mp4">
-                    </video>
-                    <div class="card-body">
-                        <div class="card-text d-flex justify-content-between">
-                          <section class="d-flex ">
-                            <img class="post-twitter--img" src="https://res.cloudinary.com/practicaldev/image/fetch/s--js5_QNRs--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/5909/a4f43064-b4f0-498d-ad0f-eb0c998efe35.png"
-                                alt="">
-                            <p class="post-twitter--codedex ms-3"><strong>Codédex</strong>
-                              <br>
-                              <small class="text-muted">Codédex</small>
-                            </p>
-                          </section>
-                          <!-- logo twitter -->
-                          <!-- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ir1kO05j--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-f95605061196010f91e64806688390eb1a4dbc9e913682e043eb8b1e06ca484f.svg" alt=""> -->
-                        </div>
-                        <p class="mt-3 ">👋 Hi! We are Codédex, a brand new learn to code platform for high schoolers and college students.
-                        </p>
-                        <p>We are beyond excited to announce that we just launched! 🥳🚀🎉</p>
-                        <small class="text-muted">15:39 PM - 28 Jul 2022 </small>
-                        <div>
-                          <a class="comments-twitter" href="">
-                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--fFnoeFxk--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-reply-action-238fe0a37991706a6880ed13941c3efd6b371e4aefe288fe8e0db85250708bc4.svg" alt="">
-                          </a>
-                          <a class="ms-4" href="">
-                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--k6dcrOn8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-retweet-action-632c83532a4e7de573c5c08dbb090ee18b348b13e2793175fea914827bc42046.svg"alt=""></a>
-                          <a class="ms-4" href="">
-                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--SRQc9lOp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-like-action-1ea89f4b87c7d37465b0eb78d51fcb7fe6c03a089805d7ea014ba71365be5171.svg" alt="">
-                          </a>
-                        </div>
-                    </div>
-                </div>
-                </section>
-                <section class="ps-md-5 p-2">
-                  <p>After working at the intersection of education and technology for the past seven years, I found that
-                    project-based learning and gamification are the most effective ways to keep young students engaged in their
-                    coding journey.
-                </p>
-                <p>Mix that in with a touch of 8-bit aesthetics, and we aim to create nothing short of a magical experience. 👾
-                </p>
-                <p>This v1.0 launch includes:</p>
-                <ul>
-                    <li>📱 Mobile view</li>
-                    <li>🔓 Challenge unlock</li>
-                    <li>🏃‍♂️ User progress</li>
-                    <li>⏳ User streak</li>
-                    <li>📛 Badges</li>
-                    <li>🛠 Project tutorials</li>
-                    <li>🏗 React & Next.js</li>
-                </ul>
-                <p>Please check out <a href="">Codédex</a> and let me know what you think! 🙏</p>
-                <p>P.S. Here’s the team saying hi:</p>
-                <img class="gif--article position-static" src="https://res.cloudinary.com/practicaldev/image/fetch/s--NTm7mcya--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0jclfblid28ucmpw0mn4.gif" alt="">
-                </section>
+                
+                
+                
+                <img class="gif--article position-static" src="" alt="">
+                
                 
             </article>
 
@@ -382,10 +425,12 @@
             <!-- Section comentarios -->
             
             <section class="comments p-2 pt-3 mt-5">
+              <br>
               <div class="comments-title d-flex justify-content-between">
                 <h2>Discussion (18)</h2>
               <button>Subscribe</button>
               </div>
+              <br>
               <article class="d-flex mt-2 col-12 ">
                   <img class="comments--img" src="./assets/home/main-section-articles/user-perfil.webp" alt="">
                 <input class="comments__input comments__input--user ms-1 " type="text">
@@ -542,7 +587,8 @@
             </section>
 
             <!-- READ NEXT-->
-            <section class="read-next mb-2 p-0">
+            <section class="read-next ps-2 pd-2 ps-md-0">
+              <br>
               <h3 class="ps-5">Read next</h3>
               <div class="d-flex ps-md-5">
                 <img class="read-next--user" src="./assets/home/main-section-articles/read-next_1.webp" alt="">
@@ -564,7 +610,7 @@
                   </p>
                 </div>  
               </div>
-              <div class="d-flex ps-md-5">
+              <div class="d-flex ps-md-5  pb-3">
                 <img class="read-next--user" src="./assets/home/main-section-articles/read-next_3.webp" alt="">
                 <div>
                   <p class="ms-2 read-next--hover">
@@ -577,12 +623,12 @@
             </section>
           </main>
           <!--RIGHT-ASIDE XAVY-->
-          <aside class="col-12 col-lg-3 ps-md-5 ms-md-4 ps-lg-0 ms-lg-0 ">
-            <section class="aside-right-post ms-md-5 ms-lg-4 mt-2">
-                <div class="card card__right--post position-static card--bg">
-                  <div class="card-body p-0">
+            <aside class="col-12 col-md-11 col-lg-3 ps-md-5 ps-lg-0 ms-lg-3">
+            <section class="aside-right-post mt-2">
+                <div class="card card__right--post card--bg position-static">
+                  <div class="card-body p-0 col-12">
                     <section class="bg-black" href="">
-                      <img class="aside__right--icon ps-2" src="./assets/home/rigth-aside-article/codedex.webp" alt="">
+                      <img class="aside__right--icon ps-md-2" src="./assets/home/rigth-aside-article/codedex.webp" alt="">
                       <span class="card-title title__codedex--bold">Codédex</span>
                     </sections>
                     <p class="px-2 pt-3"><a href="#" class="btn btn-primary d-grid gap-2">Follow</a></p>
@@ -590,7 +636,7 @@
                   </div>
                 </div>
             </section>
-            <section class="aside-right-post ms-md-5 ms-lg-4 mt-5 ">
+            <section class="aside-right-post mt-5">
               <div class="card  position-static card__trending--bg p-4">
                 <div class="card-body p-0">
                   <h3>Trending on <a href="">DEV Community</a></h3>
@@ -637,8 +683,7 @@
                   </article>
                 </div>
               </div>
-          </section>
-            
+            </section>
           </aside>
         </div>
       </section>
@@ -680,5 +725,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"></script>
+      <script src="./js/index.js" type="module"></script>
 </body>
 </html>
