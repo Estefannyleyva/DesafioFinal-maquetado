@@ -48,3 +48,4 @@ export const getPost = (callback) => {
   // [{}, {}, {}, {}]
   onSnapshot(tasksCollection, callback);
 };
+

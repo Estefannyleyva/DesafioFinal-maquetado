@@ -11,6 +11,8 @@ export const generatePosts = (post, doc) => {
       <div class="ms-md-5">
         <a href="./article.html" class="card-text">${post.title}</a>
       </div>
+
+    const tagsExp = 
         <a href="#" class="ms-md-5 hashtag-hover--blue"><span class="hashtags--blue">#</span>news</a>
         <a href="#" class="hashtag-hover--orange"><span class="hashtags--orange">#</span>beginners</a>
         <a href="#" class="hashtag-hover--green"><span class="hashtags--green">#</span>tutorial</a>
