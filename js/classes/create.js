@@ -33,3 +33,4 @@ export class Post {
     }
 };
 // si alguien le da click en like aumenta el valor
+
