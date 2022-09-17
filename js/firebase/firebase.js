@@ -33,3 +33,18 @@ export const savePost = (post) => {
     const canasta = collection(db, 'posts');
     addDoc(canasta, objectToSave);
 };
+
+
+export const getPosts = (callback) => { //Annie
+  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
+  const ppllPosts = collection(db, 'posts');
+  // [{}, {}, {}, {}]
+  onSnapshot(ppllPosts, callback);
+};
+
+export const getPost = (callback) => {
+  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
+  const tasksCollection = collection(db, 'posts');
+  // [{}, {}, {}, {}]
+  onSnapshot(tasksCollection, callback);
+};
