@@ -16,18 +16,75 @@ const app = initializeApp(firebaseConfig);
 // Connection with Firestore
 const db = getFirestore();
 
+
+/**
+ * Create post
+ * @param {object} post 
+ */
+
 export const savePost = (post) => {
     const objectToSave = {
       userName: post.userName,
       userImg: post.userImg, //hacer metodo para la fecha
+      date: new Date().toISOString(),
       title: post.title,
       tags: post.tags,// separa por # o por espacio
       reading: post.reading,
       headerImg: post.headerImg,
-      // description: post.description,
+      likes: Math.random() * (50 - 0) + 0,
+      description: post.description,
       postImg: post.postImg
-      
     };
-    const canasta = collection(db, 'posts');
-    addDoc(canasta, objectToSave);
+    const posts = collection(db, 'posts');
+    addDoc(posts, objectToSave);
+};
+
+/**
+ * Update post by id
+ * @param {number} id 
+ * @param {object} post 
+ */
+export const updatePost = (id, post) => {
+    const objectToUpdate = {
+      userName: post.userName,
+      userImg: post.userImg, // Hacer metodo para la fecha
+      title: post.title,
+      tags: post.tags,// Separa por # o por espacio
+      reading: post.reading,
+      headerImg: post.headerImg,
+      description: post.description,
+      postImg: post.postImg
+    };
+    const post = doc(db, 'posts', id);
+    updateDoc(post, objectToUpdate);
+};
+
+/**
+ * Delete Post with the id
+ * @param {number} id
+ */
+export const deletePost = (id) => {
+    const post = doc(db, 'posts', id);
+    deleteDoc(post);
+};
+
+/**
+ * Get all Posts
+ * @param {callback} callback 
+ */
+export const getPosts = (callback) => {
+    const posts = collection(db, 'posts');
+    onSnapshot(posts, callback);
+};
+// Traer todos los posts de la db 
+
+
+/**
+ * Get Post by id
+ * @param {number} id 
+ * @param {callback} callback
+ */
+ export const getPost = (id, callback) => {
+    const post = doc(db, 'posts', id);
+    onSnapshot(post, callback);
 };
