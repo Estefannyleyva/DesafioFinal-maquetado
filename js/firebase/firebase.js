@@ -41,12 +41,43 @@ export const savePost = (post) => {
 };
 
 
-export const getPosts = (callback) => { //Annie
-  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
-  const ppllPosts = collection(db, 'posts');
-  // [{}, {}, {}, {}]
-  onSnapshot(ppllPosts, callback);
+/**
+ * Update post by id
+ * @param {number} id 
+ * @param {object} post 
+ */
+ export const updatePost = (id, post) => {
+  const uniqueId = id.split('edit')[1]; // Dividir y obtener ID 
+  const objectToUpdate = {
+    userName: post.userName,
+    userImg: post.userImg, // Hacer metodo para la fecha
+    title: post.title,
+    tags: post.tags,// Separa por # o por espacio
+    reading: post.reading,
+    headerImg: post.headerImg,
+    description: post.description,
+    postImg: post.postImg
+  };
+  const post = doc(db, 'posts', uniqueId);
+  updateDoc(post, objectToUpdate);
 };
+
+
+
+
+
+
+
+/**
+ * Get all Posts
+ * @param {callback} callback 
+ */
+ export const getPosts = (callback) => {
+  const posts = collection(db, 'posts');
+  onSnapshot(posts, callback);
+};
+// Traer todos los posts de la db 
+
 
 export const getPost = (callback) => {
   //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
