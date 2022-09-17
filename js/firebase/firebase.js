@@ -29,6 +29,7 @@ export const savePost = (post) => {
       date: new Date().toISOString(),
       title: post.title,
       tags: post.tags,// separa por # o por espacio
+      likes: post.likes,
       reading: post.reading,
       headerImg: post.headerImg,
       likes: Math.random() * (50 - 0) + 0,
