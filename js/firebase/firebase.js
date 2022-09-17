@@ -36,56 +36,22 @@ export const savePost = (post) => {
       description: post.description,
       postImg: post.postImg
     };
-    const posts = collection(db, 'posts');
-    addDoc(posts, objectToSave);
+    const canasta = collection(db, 'posts');
+    addDoc(canasta, objectToSave);
 };
 
-/**
- * Update post by id
- * @param {number} id 
- * @param {object} post 
- */
-export const updatePost = (id, post) => {
-    const objectToUpdate = {
-      userName: post.userName,
-      userImg: post.userImg, // Hacer metodo para la fecha
-      title: post.title,
-      tags: post.tags,// Separa por # o por espacio
-      reading: post.reading,
-      headerImg: post.headerImg,
-      description: post.description,
-      postImg: post.postImg
-    };
-    const post = doc(db, 'posts', id);
-    updateDoc(post, objectToUpdate);
+
+export const getPosts = (callback) => { //Annie
+  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
+  const ppllPosts = collection(db, 'posts');
+  // [{}, {}, {}, {}]
+  onSnapshot(ppllPosts, callback);
 };
 
-/**
- * Delete Post with the id
- * @param {number} id
- */
-export const deletePost = (id) => {
-    const post = doc(db, 'posts', id);
-    deleteDoc(post);
+export const getPost = (callback) => {
+  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
+  const tasksCollection = collection(db, 'posts');
+  // [{}, {}, {}, {}]
+  onSnapshot(tasksCollection, callback);
 };
 
-/**
- * Get all Posts
- * @param {callback} callback 
- */
-export const getPosts = (callback) => {
-    const posts = collection(db, 'posts');
-    onSnapshot(posts, callback);
-};
-// Traer todos los posts de la db 
-
-
-/**
- * Get Post by id
- * @param {number} id 
- * @param {callback} callback
- */
- export const getPost = (id, callback) => {
-    const post = doc(db, 'posts', id);
-    onSnapshot(post, callback);
-};
