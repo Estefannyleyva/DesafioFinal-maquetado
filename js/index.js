@@ -1,34 +1,44 @@
-import {Post} from './classes/create.js';
-import {getPosts, savePost} from './firebase/firebase.js';
+// Conexión con Firebase
+import { Post} from './classes/create.js';
+import { getPosts, savePost } from './firebase/firebase.js';
+import { generatePosts } from './utils/utils.js';
+
+// Obtener datos de interfaz
+const displayPosts = document.querySelector('#showPosts');
+
 
 const buttonSavePost = document.querySelector('#savePost');
 buttonSavePost.addEventListener('click', (event) => {
     event.preventDefault();
-    const userName = document.querySelector('#user-name').value;
+    const username = document.querySelector('#user-name').value;
     const userImg = document.querySelector('#user-url').value;
-    const date = new Date();
-    const dateF = date.toDateString();
-    console.log(dateF)
+    const date = new Date().toDateString();
     const title = document.querySelector('#title').value;
     const tags = document.querySelector('#tags').value;
-    let likes = 2;
+    const likes = Math.round(Math.random() * (50 - 0) + 0);
+    const comments = Math.round(Math.random() * (50 - 0) + 0);
     const reading = document.querySelector('#reading').value;
     const headerImg = document.querySelector('#header-img').value;
     const description = document.querySelector('#description').value;
     const postImg = document.querySelector('#post-img').value;
     
-    const post = new Post(userName, userImg, dateF, title, tags, likes, reading, headerImg, description, postImg);
+    const post = new Post(username, userImg, date, title, tags, likes, comments, reading, headerImg, description, postImg);
     console.log(post)
     savePost(post);
 });
 
+// setTimeout(function(){
+//     window.location.reload();
+//  }, 5000);
 
-getPosts((ppllPosts) => {
-    taskList.innerHTML = '';
-    tasks.forEach(doc => {
-        const task = doc.data();
-        generateTask(task, doc);
+
+getPosts((posts) => {
+    displayPosts.innerHTML = '';
+    posts.forEach(doc => {
+        const post = doc.data();
+        generatePosts(post, doc);
     });
+
 
     const deleteButtons = document.querySelectorAll('.delete-button');
     deleteButtons.forEach((button) => {
@@ -40,7 +50,3 @@ getPosts((ppllPosts) => {
     })
 });
 
-const tagsppllView = ['#', '#', '#', '#'];
-tagsppllView.forEach(function(tagsPpll, index) {
-    console.log(`${index} : ${tagsPpll}`);
-});
