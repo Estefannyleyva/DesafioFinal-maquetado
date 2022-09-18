@@ -75,10 +75,8 @@ export const savePost = (post) => {
 // Traer todos los posts de la db 
 
 
-export const getPost = (callback) => {
-  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
-  const tasksCollection = collection(db, 'posts');
-  // [{}, {}, {}, {}]
-  onSnapshot(tasksCollection, callback);
+export const getPostView = (callback) => {
+  const postsCollection = collection(db, 'posts');
+  onSnapshot(postsCollection, callback);
 };
 

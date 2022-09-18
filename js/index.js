@@ -1,11 +1,11 @@
 // Conexión con Firebase
 import { Post} from './classes/create.js';
-import { getPosts, savePost } from './firebase/firebase.js';
-import { generatePosts } from './utils/utils.js';
+import { getPosts, savePost, getPostView} from './firebase/firebase.js';
+import { generatePosts, generateViewPost } from './utils/utils.js';
 
 // Obtener datos de interfaz
 const displayPosts = document.querySelector('#showPosts');
-
+const viewPost = document.querySelector('#getPost-view');
 
 const buttonSavePost = document.querySelector('#savePost');
 buttonSavePost.addEventListener('click', (event) => {
@@ -27,10 +27,11 @@ buttonSavePost.addEventListener('click', (event) => {
 });
 
 getPosts((posts) => {
-     displayPosts.innerHTML = '';
+    displayPosts.innerHTML = '';
     posts.forEach(doc => {
         const post = doc.data();
          generatePosts(post, doc);
+         
     });
 
     const deleteButtons = document.querySelectorAll('.delete-button');
@@ -41,3 +42,13 @@ getPosts((posts) => {
         });
     });
 });
+
+getPostView((posts) =>{
+    viewPost.innerHTML ='';
+    let post;
+    posts.forEach(doc =>{
+         post = doc.data();
+        
+    })
+    generateViewPost(post);
+})
