@@ -16,9 +16,16 @@ const app = initializeApp(firebaseConfig);
 // Connection with Firestore
 const db = getFirestore();
 
+
+/**
+ * Create post
+ * @param {object} post 
+ */
+
 export const savePost = (post) => {
-    const objectToSave = {
-      userName: post.userName,
+  // let likesCounter = Math.random() * (50 - 0) + 0; 
+  const objectToSave = {
+      username: post.username,
       userImg: post.userImg, //hacer metodo para la fecha
       date: post.date,
       title: post.title,
@@ -26,21 +33,47 @@ export const savePost = (post) => {
       likes: post.likes,
       reading: post.reading,
       headerImg: post.headerImg,
+      likes: post.likes,
+      comments: post.comments,
       description: post.description,
       postImg: post.postImg
-      
     };
     const canasta = collection(db, 'posts');
     addDoc(canasta, objectToSave);
 };
 
 
-export const getPosts = (callback) => { //Annie
-  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
-  const ppllPosts = collection(db, 'posts');
-  // [{}, {}, {}, {}]
-  onSnapshot(ppllPosts, callback);
+// /**
+//  * Update post by id
+//  * @param {number} id 
+//  * @param {object} post 
+//  */
+//  export const updatePost = (id, post) => {
+//   const uniqueId = id.split('edit')[1]; // Dividir y obtener ID 
+//   const objectToUpdate = {
+//     username: post.username,
+//     userImg: post.userImg, // Hacer metodo para la fecha
+//     title: post.title,
+//     tags: post.tags,// Separa por # o por espacio
+//     reading: post.reading,
+//     headerImg: post.headerImg,
+//     description: post.description,
+//     postImg: post.postImg
+//   };
+//   const post = doc(db, 'posts', uniqueId);
+//   updateDoc(post, objectToUpdate);
+// };
+
+/**
+ * Get all Posts
+ * @param {callback} callback 
+ */
+ export const getPosts = (callback) => {
+  const posts = collection(db, 'posts');
+  onSnapshot(posts, callback);
 };
+// Traer todos los posts de la db 
+
 
 export const getPost = (callback) => {
   //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
