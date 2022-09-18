@@ -1,8 +1,5 @@
 .aside__left--post{
     width: 100%;
-}
-.aside__left--fixed{
-    width: 100%;
     background-color: hsl(0, 0%, 100%);
     position: fixed;
     top: 93%;
@@ -48,15 +45,16 @@
   @media screen and(min-width:768px) {
     .aside__left--post{
         width: 50px;
-        
+        position: static;
+        background-color: transparent;
+        top: 25%;
+    }
+    .aside__left--sticky{
+        position: sticky;
+        bottom: 10%;
     }
     .post--list{
         display: contents;
-    }
-    .aside__left--fixed{
-        width: 50px;
-        background-color: transparent;
-        top: 30%;
     }
      .btn__aside{
         display: block;

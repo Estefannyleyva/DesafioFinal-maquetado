@@ -362,10 +362,6 @@ main .card .btn-secondary:hover {
 }
 .aside__left--post {
   width: 100%;
-}
-
-.aside__left--fixed {
-  width: 100%;
   background-color: hsl(0deg, 0%, 100%);
   position: fixed;
   top: 93%;
@@ -411,14 +407,16 @@ main .card .btn-secondary:hover {
 @media screen and (min-width: 768px) {
   .aside__left--post {
     width: 50px;
+    position: static;
+    background-color: transparent;
+    top: 25%;
+  }
+  .aside__left--sticky {
+    position: -webkit-sticky;
+    bottom: 10%;
   }
   .post--list {
     display: contents;
-  }
-  .aside__left--fixed {
-    width: 50px;
-    background-color: transparent;
-    top: 30%;
   }
   .btn__aside {
     display: block;
@@ -600,7 +598,7 @@ main .card .btn-secondary:hover {
 }
 @media screen and (min-width: 1024px) {
   .aside-right-post {
-    width: 100%;
+    width: 120%;
   }
 }
 .read-next {
