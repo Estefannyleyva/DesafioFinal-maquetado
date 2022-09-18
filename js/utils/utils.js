@@ -18,8 +18,8 @@ export const generatePosts = (post, doc) => {
         <a href="#" class="hashtag-hover--green"><span class="hashtags--green">#</span>${tagSplited[2]}</a>
         <section class="d-flex justify-content-between ms-md-5">
           <div>
-            <button class="btn" type="button"><img src="./assets/home/assets-mainsection/heart.svg" alt="Show reactions">${post.likes}<span class="reactions">reactions</span></button>
-            <button class="btn" type="button"><img src="./assets/home/assets-mainsection/comments.svg" alt="Show comments">${post.comments}<span class="reactions">comments</span></button>
+            <button class="btn" type="button"><img src="./assets/home/assets-mainsection/heart.svg" alt="Show reactions">${post.likes}<span class="reactions"> reactions</span></button>
+            <button class="btn" type="button"><img src="./assets/home/assets-mainsection/comments.svg" alt="Show comments">${post.comments}<span class="reactions"> comments</span></button>
           </div>
           <div>
             <span class="text-muted">${post.reading} min read</span>
