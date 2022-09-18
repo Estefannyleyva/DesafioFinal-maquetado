@@ -25,8 +25,19 @@ buttonSavePost.addEventListener('click', (event) => {
     savePost(post);
     
 });
-const deleteButtons = document.querySelectorAll('.delete-button');
-        button.addEventListener('click', ({target: {id}}) => { // destructuracion de datos
 
-            //const id = event.getAttribute('id') no sabemos si funciona, pruebenlo
+getPosts((posts) => {
+     displayPosts.innerHTML = '';
+    posts.forEach(doc => {
+        const post = doc.data();
+         generatePosts(post, doc);
     });
+
+    const deleteButtons = document.querySelectorAll('.delete-button');
+    deleteButtons.forEach((button) => {
+        button.addEventListener('click', ({target: {id}}) => { // destructuracion de datos
+            //const id = event.getAttribute('id') no sabemos si funciona, pruebenlo
+            deleteTask(id);
+        });
+    });
+});
