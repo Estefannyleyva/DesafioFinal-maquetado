@@ -8,28 +8,31 @@ export const generatePosts = (post, doc) => {
   const displayPosts = document.querySelector('#showPosts');
     displayPosts.innerHTML += `
     <div class="card">
-      <img src="${post.headerImg}" class="card-img-top" alt="Header Image"/>
+      <div class="header-img-visibility">
+        <img src="${post.headerImg}" class="card-img-top" alt="Header Image"/>
+      </div>
+  
       <div class="card-body">      
         <section class="container_img-text">
           <img class="card main__section--img" src="${post.userImg}" alt="">
-          <p class="card text__name">${post.username}<br> <span class="text-muted">${post.date}</span></p>
+          <p class="card text__name pt-2">${post.username}<br> <span class="text-muted">${post.date}</span></p>
         </section>
         <div class="ms-md-3 mt-2 mb-1">
           <a href="./article.html?id=${doc.id}" class="card-text">${post.title}</a>
         </div>
-          <a class="hashtag-hover--gray ms-4" href=""><span class="hashtag--gray">#</span>${tagSplited[0]}</a>
+          <a class="hashtag-hover--gray ms-0 ms-md-2" href=""><span class="hashtag--gray">#</span>${tagSplited[0]}</a>
           <a class="hashtag-hover--green ms-1" href=""><span class="hashtag--green">#</span>${tagSplited[1]}</a>
           <a class="hashtag-hover--blue" href="#"><span class="hashtags--blue">#</span>${tagSplited[2]}</a>
           
           <section class="d-flex justify-content-between">
            <div>
-            <button class="btn" type="button"><img src="./assets/home/assets-mainsection/heart.svg" alt="Show reactions">${post.likes}<span class="reactions"> reactions</span></button>
-            <button class="btn" type="button"><img src="./assets/home/assets-mainsection/comments.svg" alt="Show comments">${post.comments}<span class="reactions"> comments</span></button>
+            <button class="btn p-0 p-md-1" type="button"><img src="./assets/home/assets-mainsection/heart.svg" alt="Show reactions">${post.likes}<span class="reactions"> reactions</span></button>
+            <button class="btn p-0 p-md-1" type="button"><img src="./assets/home/assets-mainsection/comments.svg" alt="Show comments">${post.comments}<span class="reactions"> comments</span></button>
           </div>
           <div>
             <span class="text-muted">${post.reading} read</span>
-            <button type="button" data-bs-id="${doc.id}" class="btn btn-secondary markPost">${textMarked}</button>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalEdit${doc.id}" id="editModal" class="btn btn-secondary edit-button">Edit</button>
+            <button type="button" data-bs-id="${doc.id}" class="btn btn-secondary markPost p-0 p-md-1"><img src="./assets/home/assets-mainsection/markButton.svg" alt="" /></button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalEdit${doc.id}" id="editModal" class="edit-button p-0 p-md-1"><img src="./assets/home/assets-mainsection/editButton.svg" alt="boton de editar" /></button>
             <div class="modal fade" id="exampleModalEdit${doc.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -79,7 +82,7 @@ export const generatePosts = (post, doc) => {
                 </div>
               </div>
             </div>
-            <button type="button" id="deletePost" data-bs-id="${doc.id}" class="btn btn-secondary delete-post-btn">Delete</button>
+            <button type="button" id="deletePost" data-bs-id="${doc.id}" class="btn btn-secondary delete-post-btn p-0 p-md-1"><img src="./assets/home/assets-mainsection/deleteButton.svg" alt="" /></button>
           </div>
         </section>
       </div>

@@ -145,6 +145,30 @@ main {
                 background-color: rgb(188, 184, 184);
             }
         }
+        .edit-button{
+        background: none;
+           border: none;
+           img{
+            width: 23px;
+            height: 23px;
+           }
+        }
+        .markPost{
+            background: none;
+            border: none;
+            img{
+                width: 23px;
+                height: 23px;
+           }
+        }
+        .delete-post-btn{
+            background: none;
+            border: none;
+            img{
+                width: 23px;
+                height: 23px;
+           }
+        }
     }
 }
 

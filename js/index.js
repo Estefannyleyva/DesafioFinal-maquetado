@@ -148,4 +148,11 @@ getPosts((posts) => {
             deletePost(id)
         })  
     })
+    const cards = document.querySelectorAll('.header-img-visibility')
+    for (const card of cards) {
+      if (card != cards[0]) { 
+      card.style.display = "none" 
+  }
+    }
+    
 });

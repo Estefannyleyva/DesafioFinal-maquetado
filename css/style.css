@@ -273,6 +273,30 @@ main .card .btn-secondary {
 main .card .btn-secondary:hover {
   background-color: rgb(188, 184, 184);
 }
+main .card .edit-button {
+  background: none;
+  border: none;
+}
+main .card .edit-button img {
+  width: 23px;
+  height: 23px;
+}
+main .card .markPost {
+  background: none;
+  border: none;
+}
+main .card .markPost img {
+  width: 23px;
+  height: 23px;
+}
+main .card .delete-post-btn {
+  background: none;
+  border: none;
+}
+main .card .delete-post-btn img {
+  width: 23px;
+  height: 23px;
+}
 
 .reactions {
   display: none;
