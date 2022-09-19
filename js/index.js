@@ -1,7 +1,7 @@
 // Conexión con Firebase
 import { Post} from './classes/create.js';
 import { getPosts, savePost, getPostView} from './firebase/firebase.js';
-import { generatePosts, generateViewPost } from './utils/utils.js';
+import { generatePosts} from './utils/utils.js';
 
 // Obtener datos de interfaz
 const displayPosts = document.querySelector('#showPosts');
@@ -42,13 +42,3 @@ getPosts((posts) => {
         });
     });
 });
-
-getPostView((posts) =>{
-    viewPost.innerHTML ='';
-    let post;
-    posts.forEach(doc =>{
-         post = doc.data();
-        
-    })
-    generateViewPost(post);
-})

@@ -1,4 +1,4 @@
-import { getFirestore, addDoc, deleteDoc, updateDoc, getDoc, collection, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
+import { getFirestore, addDoc, deleteDoc, updateDoc, getDoc, collection, onSnapshot, doc} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
 const firebaseConfig = {
     apiKey: "AIzaSyACuaskt6H9j6bjsLKurzIMihNWzHtf8cM",
@@ -72,11 +72,14 @@ export const savePost = (post) => {
   const posts = collection(db, 'posts');
   onSnapshot(posts, callback);
 };
-// Traer todos los posts de la db 
 
 
-export const getPostView = (callback) => {
-  const postsCollection = collection(db, 'posts');
-  onSnapshot(postsCollection, callback);
+export const getPostView = async (id) => {
+  // const postDataInfo = doc(db, "posts" id);
+  // console.log(postDataInfo)
+  // getDoc(postDataInfo);
+  const postRef = doc(db, "posts", id);
+  let postDataInfo = await getDoc(postRef)
+  return postDataInfo.data();
 };
 
