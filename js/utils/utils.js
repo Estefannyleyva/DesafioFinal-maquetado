@@ -1,9 +1,9 @@
 export const generatePosts = (post, doc) => {
   const tagSplited = post.tags.split(' ');
   let marked = post.marked;
-  let textMarked = "Marcar";
+  let textMarked = "+";
   if (marked == true) {
-    textMarked = "Marcado";
+    textMarked = "-";
   }
   const displayPosts = document.querySelector('#showPosts');
     displayPosts.innerHTML += `
@@ -31,8 +31,8 @@ export const generatePosts = (post, doc) => {
           </div>
           <div>
             <span class="text-muted">${post.reading} read</span>
-            <button type="button" data-bs-id="${doc.id}" class="btn btn-secondary markPost p-0 p-md-1"><img src="./assets/home/assets-mainsection/markButton.svg" alt="" /></button>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalEdit${doc.id}" id="editModal" class="edit-button p-0 p-md-1"><img src="./assets/home/assets-mainsection/editButton.svg" alt="boton de editar" /></button>
+            <button type="button" data-bs-id="${doc.id}" class="btn btn-secondary markPost p-0">${textMarked}</button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalEdit${doc.id}" id="editModal" class="edit-button"><img src="./assets/home/assets-mainsection/editButton.svg" alt="boton de editar" /></button>
             <div class="modal fade" id="exampleModalEdit${doc.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">

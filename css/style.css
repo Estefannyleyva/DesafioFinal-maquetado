@@ -173,8 +173,8 @@ main .card .container_img-text {
   display: flex;
 }
 main .card .main__section--img {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
 }
 main .card .text__name {
@@ -191,7 +191,7 @@ main .card .text__name:hover {
 main .card .card-text {
   margin: 0;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1rem;
   text-decoration: none;
   color: black;
   border: 50px;
@@ -282,12 +282,13 @@ main .card .edit-button img {
   height: 23px;
 }
 main .card .markPost {
-  background: none;
+  background-color: rgba(97, 224, 249, 0.53);
   border: none;
-}
-main .card .markPost img {
+  border-radius: 5px;
+  font-size: 15px;
   width: 23px;
-  height: 23px;
+  height: 25px;
+  padding-bottom: 9px;
 }
 main .card .delete-post-btn {
   background: none;
@@ -295,7 +296,6 @@ main .card .delete-post-btn {
 }
 main .card .delete-post-btn img {
   width: 23px;
-  height: 23px;
 }
 
 .reactions {
@@ -303,8 +303,19 @@ main .card .delete-post-btn img {
 }
 
 @media (min-width: 768px) {
-  .reactions {
+  main .reactions {
     display: contents;
+  }
+  main .card .main__section--img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+  main .card .text__name {
+    font-size: 1rem;
+  }
+  main .card .card-text {
+    font-size: 2rem;
   }
 }
 .right-aside-mq {
