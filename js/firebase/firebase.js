@@ -1,84 +1,107 @@
-import { getFirestore, addDoc, deleteDoc, updateDoc, getDoc, collection, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
+import {
+  getFirestore,
+  addDoc,
+  deleteDoc,
+  updateDoc,
+  collection,
+  onSnapshot,
+  doc,
+} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
 const firebaseConfig = {
-    apiKey: "AIzaSyACuaskt6H9j6bjsLKurzIMihNWzHtf8cM",
-    authDomain: "devtoproject-cd612.firebaseapp.com",
-    projectId: "devtoproject-cd612",
-    storageBucket: "devtoproject-cd612.appspot.com",
-    messagingSenderId: "701387350012",
-    appId: "1:701387350012:web:7b26b6d8b8b4b9688c9c79",
-    // measurementId: "G-GHWESJG1NH"
-  };
-  
+  apiKey: "AIzaSyACuaskt6H9j6bjsLKurzIMihNWzHtf8cM",
+  authDomain: "devtoproject-cd612.firebaseapp.com",
+  projectId: "devtoproject-cd612",
+  storageBucket: "devtoproject-cd612.appspot.com",
+  messagingSenderId: "701387350012",
+  appId: "1:701387350012:web:7b26b6d8b8b4b9688c9c79",
+  // measurementId: "G-GHWESJG1NH"
+};
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 // Connection with Firestore
 const db = getFirestore();
 
-
 /**
  * Create post
- * @param {object} post 
+ * @param {object} post
  */
 
 export const savePost = (post) => {
-  // let likesCounter = Math.random() * (50 - 0) + 0; 
   const objectToSave = {
-      username: post.username,
-      userImg: post.userImg, //hacer metodo para la fecha
-      date: post.date,
-      title: post.title,
-      tags: post.tags,// separa por # o por espacio
-      likes: post.likes,
-      reading: post.reading,
-      headerImg: post.headerImg,
-      likes: post.likes,
-      comments: post.comments,
-      description: post.description,
-      postImg: post.postImg
-    };
-    const canasta = collection(db, 'posts');
-    addDoc(canasta, objectToSave);
+    username: post.username,
+    userImg: post.userImg,
+    date: post.date,
+    title: post.title,
+    tags: post.tags,
+    likes: post.likes,
+    reading: post.reading,
+    headerImg: post.headerImg,
+    likes: post.likes,
+    comments: post.comments,
+    description: post.description,
+    postImg: post.postImg,
+    marked: post.marked
+  };
+
+  const container = collection(db, "posts");
+  addDoc(container, objectToSave);
 };
 
+/**
+ * Update post by id
+ * @param {number} id
+ * @param {object} post
+ */
+export const updatePost = (id, post) => {
+  const objectToUpdate = {
+    username: post.username,
+    userImg: post.userImg,
+    date: post.date,
+    title: post.title,
+    tags: post.tags,
+    likes: post.likes,
+    reading: post.reading,
+    headerImg: post.headerImg,
+    likes: post.likes,
+    comments: post.comments,
+    description: post.description,
+    postImg: post.postImg,
+    marked: post.marked
+  };
 
-// /**
-//  * Update post by id
-//  * @param {number} id 
-//  * @param {object} post 
-//  */
-//  export const updatePost = (id, post) => {
-//   const uniqueId = id.split('edit')[1]; // Dividir y obtener ID 
-//   const objectToUpdate = {
-//     username: post.username,
-//     userImg: post.userImg, // Hacer metodo para la fecha
-//     title: post.title,
-//     tags: post.tags,// Separa por # o por espacio
-//     reading: post.reading,
-//     headerImg: post.headerImg,
-//     description: post.description,
-//     postImg: post.postImg
-//   };
-//   const post = doc(db, 'posts', uniqueId);
-//   updateDoc(post, objectToUpdate);
-// };
+  const postToUpdate = doc(db, 'posts', id);
+  updateDoc(postToUpdate, objectToUpdate);
+};
+
+/**
+ * Delete post by id
+ * @param {number} id
+ */
+export const deletePost = (id) => {
+  const postToDelete = doc(db, 'posts', id);
+  deleteDoc(postToDelete);
+};
 
 /**
  * Get all Posts
- * @param {callback} callback 
+ * @param {callback} callback
  */
- export const getPosts = (callback) => {
+export const getPosts = (callback) => {
   const posts = collection(db, 'posts');
   onSnapshot(posts, callback);
 };
-// Traer todos los posts de la db 
+
+/**
+ * Get Post by id
+ * @param {number} id
+ * @param {callback} callback
+ */
 
 
-export const getPost = (callback) => {
-  //const tasksCollection = collection(db, 'tasks').orderBy("title", "asc");
-  const tasksCollection = collection(db, 'posts');
-  // [{}, {}, {}, {}]
-  onSnapshot(tasksCollection, callback);
-};
-
+// export const getPost = (id, callback) => {
+//   const post = doc(db, 'posts', id);
+//   onSnapshot(post, callback);
+// };
