@@ -80,10 +80,10 @@ export const updatePost = (id, post) => {
  * Delete post by id
  * @param {number} id
  */
-export const deletePost = (id) => {
-  const postToDelete = doc(db, 'posts', id);
-  deleteDoc(postToDelete);
-};
+ export const deletePost = (id) => {
+  const deletePost = doc(db, "posts", id)
+  deleteDoc(deletePost);
+}
 
 /**
  * Get all Posts

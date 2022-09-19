@@ -141,11 +141,11 @@ getPosts((posts) => {
     });
   });
 
-  const buttonDeletePosts = document.querySelectorAll("#deletePost");
-  buttonDeletePosts.forEach((buttonDeletePost) => {
-    buttonDeletePost.addEventListener("click", (event) => {
-      const postId = event.target.getAttribute("data-bs-id");
-      deletePost(postId);
-    });
-  });
+  const deleteButtons = document.querySelectorAll(".delete-post-btn") // [button1,button2,button3]
+    deleteButtons.forEach((deleteButton) => {
+        deleteButton.addEventListener('click', idButton => {
+            const id = deleteButton.getAttribute("data-bs-id")
+            deletePost(id)
+        })  
+    })
 });

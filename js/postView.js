@@ -1,14 +1,10 @@
 import { getPostView} from './firebase/firebase.js';
-
 const querystring = window.location.search;
-    console.log(querystring)
     const params = new URLSearchParams(querystring)
     let id = params.get('id');
-    console.log(id)
 let post = await getPostView(id);
  
 const generateViewPost = (post) =>{
-    console.log(post)
     const likesPostView = document.querySelector('#likes-postView')
     likesPostView.innerText = post.likes
     const tagSplited = post.tags.split(' ');

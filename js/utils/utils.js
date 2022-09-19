@@ -79,7 +79,7 @@ export const generatePosts = (post, doc) => {
                 </div>
               </div>
             </div>
-            <button type="button" id="deletePost" data-bs-id="${doc.id}" class="btn btn-secondary">Delete</button>
+            <button type="button" id="deletePost" data-bs-id="${doc.id}" class="btn btn-secondary delete-post-btn">Delete</button>
           </div>
         </section>
       </div>
