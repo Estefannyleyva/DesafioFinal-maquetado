@@ -1,6 +1,11 @@
 
 export const generatePosts = (post, doc) => {
   const tagSplited = post.tags.split(' ');
+  let marked = post.marked;
+  let textMarked = "Marcar";
+  if (marked == true) {
+    textMarked = "Marcado";
+  }
   const displayPosts = document.querySelector('#showPosts');
     displayPosts.innerHTML += `
     <div class="card">

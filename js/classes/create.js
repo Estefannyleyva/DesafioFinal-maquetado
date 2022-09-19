@@ -1,5 +1,5 @@
 export class Post {
-    constructor(username, userImg, date, title, tags, likes, comments, reading, headerImg, description, postImg){
+    constructor(username, userImg, date, title, tags, likes, comments, reading, headerImg, description, postImg, marked){
         this.username = username;
         this.userImg = userImg;
         this.date = date;
@@ -11,6 +11,7 @@ export class Post {
         this.headerImg = headerImg;
         this.description = description;
         this.postImg = postImg;
+        this.marked = marked;
     }
     addLike() {
         this.likes++;

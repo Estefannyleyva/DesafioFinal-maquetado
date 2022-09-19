@@ -23,46 +23,46 @@ const db = getFirestore();
  */
 
 export const savePost = (post) => {
-  // let likesCounter = Math.random() * (50 - 0) + 0; 
   const objectToSave = {
       username: post.username,
-      userImg: post.userImg, //hacer metodo para la fecha
+      userImg: post.userImg, 
       date: post.date,
       title: post.title,
-      tags: post.tags,// separa por # o por espacio
+      tags: post.tags,
       likes: post.likes,
       reading: post.reading,
       headerImg: post.headerImg,
       likes: post.likes,
       comments: post.comments,
       description: post.description,
-      postImg: post.postImg
+      postImg: post.postImg,
+      marked: post.marked
     };
-    const canasta = collection(db, 'posts');
-    addDoc(canasta, objectToSave);
+    const container = collection(db, 'posts');
+    addDoc(container, objectToSave);
 };
 
 
-// /**
-//  * Update post by id
-//  * @param {number} id 
-//  * @param {object} post 
-//  */
-//  export const updatePost = (id, post) => {
-//   const uniqueId = id.split('edit')[1]; // Dividir y obtener ID 
-//   const objectToUpdate = {
-//     username: post.username,
-//     userImg: post.userImg, // Hacer metodo para la fecha
-//     title: post.title,
-//     tags: post.tags,// Separa por # o por espacio
-//     reading: post.reading,
-//     headerImg: post.headerImg,
-//     description: post.description,
-//     postImg: post.postImg
-//   };
-//   const post = doc(db, 'posts', uniqueId);
-//   updateDoc(post, objectToUpdate);
-// };
+/**
+ * Update post by id
+ * @param {number} id 
+ * @param {object} post 
+ */
+ export const updatePost = (id, post) => {
+  const objectToUpdate = {
+    username: post.username,
+    userImg: post.userImg, // Hacer metodo para la fecha
+    title: post.title,
+    tags: post.tags,// Separa por # o por espacio
+    reading: post.reading,
+    headerImg: post.headerImg,
+    description: post.description,
+    postImg: post.postImg,
+    marked: post.marked
+  };
+  const postToUpdate = doc(db, 'posts', id);
+  updateDoc(post, objectToUpdate);
+};
 
 /**
  * Get all Posts
@@ -73,13 +73,15 @@ export const savePost = (post) => {
   onSnapshot(posts, callback);
 };
 
+/**
+ * Get Post by id
+ * @param {number} id
+ * @param {callback} callback
+ */
 
 export const getPostView = async (id) => {
-  // const postDataInfo = doc(db, "posts" id);
-  // console.log(postDataInfo)
-  // getDoc(postDataInfo);
-  const postRef = doc(db, "posts", id);
-  let postDataInfo = await getDoc(postRef)
-  return postDataInfo.data();
+  const postDataInfo = doc(db, "posts", id);
+  const getPostView = await getDoc(postDataInfo)
+  return getPostView.data();
 };
 
