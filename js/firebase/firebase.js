@@ -33,3 +33,17 @@ export const savePost = (post) => {
     const canasta = collection(db, 'posts');
     addDoc(canasta, objectToSave);
 };
+
+export const deletePost = (id) => {
+  const deletePost = doc(db, "posts", id)
+    deleteDoc(deletePost);
+}
+
+
+
+
+/*export const deleteTask = (id) => {
+    const array = id.split('deleteButton');
+    const cleanId = array[1];
+    deleteDoc(doc(db, 'tasks', cleanId));
+};*/
