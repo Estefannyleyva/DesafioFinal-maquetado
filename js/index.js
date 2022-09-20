@@ -43,6 +43,17 @@ buttonSavePost.addEventListener("click", (event) => {
     marked
   );
   savePost(post);
+  const exitModal = document.querySelector("#exampleModal");
+  const modal = bootstrap.Modal.getInstance(exitModal);
+  modal.hide();
+  document.querySelector("#user-name").value = '';
+  document.querySelector("#user-url").value = '';
+  document.querySelector("#title").value = '';
+  document.querySelector("#tags").value = '';
+  document.querySelector("#reading").value = '';
+  document.querySelector("#header-img").value = '';
+  document.querySelector("#description").value = '';
+  document.querySelector("#post-img").value = '';
 });
 
 getPosts((posts) => {
